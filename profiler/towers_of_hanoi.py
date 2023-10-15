@@ -25,15 +25,16 @@ def hanoi_recursive(num_discs, source, auxiliary, destination, towers):
     else:
         hanoi_recursive(num_discs - 1, source, destination, auxiliary, towers)
         move_disc(towers, source, destination)
-        display_towers(towers)
+        #display_towers(towers)
         hanoi_recursive(num_discs - 1, auxiliary, source, destination, towers)
 
 
 def solve_hanoi(num_discs):
     towers = initialize_towers(num_discs)
-    display_towers(towers)
+    #display_towers(towers)
     hanoi_recursive(num_discs, 0, 1, 2, towers)
 
 if __name__ == "__main__":
     num_discs = 20
     solve_hanoi(num_discs)
+    display_towers()
